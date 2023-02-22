@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/join.css">
+  <title>가입하기 1단계</title>
+</head>
+
+<body>
+  <div class="main_container">
+    <div class="before">
+      <a href="./login.html"><i class="fas fa-angle-left"></i></a>
+    </div>
+    <!-- 로고 -->
+    <header>
+      <div class="header_container">
+        <img src="이미지src" alt="">
+      </div>
+    </header>
+
+    <!-- id, pw 입력창 -->
+    <form>
+      <div class="section_container">
+        <div class="section_items">
+          <label for="name" class="name">이름</label>
+          <input type="text" placeholder="이름을 입력해주세요" name="name" id="name" required>
+
+          <label for="university" class="J_label">학교</label>
+          <select id="university" name="university">
+            <option value="select">학교를 선택하세요</option>
+            <option value="sangmyung">상명대학교</option>
+            <option value="swu">서울여자대학교</option>
+            <option value="hufs">한국외국어대학교</option>
+            <option value="kangnam">강남대학교</option>
+            <option value="skuniv">서경대학교</option>
+            <option value="sungkyul">성결대학교</option>
+          </select>
+
+          <label for="email" class="J_label">이메일</label>
+          <div class="email_univ">
+            <input type="text" placeholder="이메일" name="email" id="email" required class="join_univ">
+            <div id="result"></div>
+          </div>
+        </div>
+
+        <div class="confirm_btn">
+          <!-- 누르면 이메일로 인증번호 발송되어야함 / 이름, 학교 저장
+          <a href="./join02.html">다음</a> -->
+          <button type="submit" id="submitBtn">다음</button>
+        </div>
+    </form>
+  </div>
+
+  <script script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="../axios_prac/join01.js"></script>
+
+  <script>
+    const univ = document.getElementById("univ");
+    const result_univ = document.getElementById("result");
+    const univ_email = document.getElementById("univ_email");
+  
+    univ.addEventListener("change", (event) => {
+      const selectedUniv = event.target.value;
+      let resultUniv = "";
+  
+      switch (selectedUniv) {
+        case "sangmyung": // 상명대
+          resultUniv = "sangmyung.kr"; 
+          break;
+        case "swu": // 서울여대
+          resultUniv = "@swu.ac.kr";
+          break;
+        case "kangnam": //강남대
+          resultUniv = "@kangnam.ac.kr";
+          break;
+        case "hufs": //한국외대
+          resultUniv = "@hufs.ac.kr";
+          break;
+        case "skuniv": // 서경대
+          resultUniv = "@skuniv.ac.kr";
+          break;
+        default: //성결대
+          resultUniv = "@sungkyul.ac.kr";
+          break;
+      }
+  
+      result_univ.textContent = resultUniv;
+      univ_email.placeholderContent = resultUniv;
+    });
+  </script>
+</body>
+</html>

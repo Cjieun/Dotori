@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/join.css">
+  <title>가입하기 2단계</title>
+</head>
+
+<body>
+  <div class="main_container">
+    <div class="before">
+      <a href="./join01.html"><i class="fas fa-angle-left"></i></a>
+    </div>
+
+    <!-- 로고 -->
+    <header>
+      <div class="header_container">
+        <img src="이미지src" alt="">
+      </div>
+    </header>
+
+    <!-- 인증코드 -->
+    <form>
+      <section>
+        <div class="section_container">
+          <div class="section_items">
+            <label for="J_name" class="J_label">입력하신 메일로 인증코드를 보냈습니다. </label>
+            <input type="text" placeholder="인증코드" name="code" id="code" required>
+          </div>
+
+          <div class="confirm_btn" style="margin-bottom: 30px;">
+            <!--<a href="#">확인</a> -->
+            <button type="submit" id="submitBtn">확인</button>
+          </div>
+          
+          <!-- 비밀번호 -->
+          <div class="section_items">
+            <label for="J_pw" class="J_label">비밀번호</label>
+            <input type="password" placeholder="비밀번호를 입력해주세요" name="J_pw" id="J_pw" required>
+
+            <label for="J_pw_confirm" class="J_label">비밀번호 확인  <span class="false_pw">비밀번호가 일치하지 않습니다.</span></label>
+            
+            <input type="password" placeholder="비밀번호를 입력해주세요" name="J_pw_confirm" id="J_pw_confirm" required>
+          </div>
+
+          <div class="confirm_btn" style="margin-top: 15px">
+            <!-- <a href="./join_success.html">가입 완료</a> -->
+            <button type="submit" id="submitBtn">가입 완료</button>
+          </div>
+        </div>
+      </section>
+    </form>
+
+  </div>
+  
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="../axios_prac/join02.js"></script>
+</body>
+
+</html>
