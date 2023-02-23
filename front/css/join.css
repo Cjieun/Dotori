@@ -1,16 +1,19 @@
 @media (max-width: 768px) {
 }
 
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+
 /* header */
 header {
   height: 80px;
 }
 
 .header_container {
-  width: 80px;
   height: 70px;
   margin-bottom: 50px;
-  background-color: #FFA000;
   border-radius: 20px;
 
   position: absolute;
@@ -29,6 +32,7 @@ header {
 }
 
 .section_container {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 375px;
@@ -48,10 +52,10 @@ header {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
 }
 
-.section_items input, select  {
+.section_items input, select {
   padding: 8px 8px 8px 20px;
   border-radius: 16px;
   border: none;
@@ -100,6 +104,7 @@ header {
 /* 가입완료 텍스트 */
 .success_text {
   color: #FFA000;
+  font-weight: bold;
   margin-bottom: 30px;
 }
 
@@ -124,6 +129,7 @@ header {
   color: white;
   border: none;
   border-radius: 20px;
+  margin-top: 8px;
 }
 
 .confirm_btn a {
@@ -139,16 +145,41 @@ header {
   gap: 5px;
   align-items: baseline;
   flex-wrap: wrap;
+  justify-content: space-between
 }
 
 .join_univ {
   width: 146px;
 }
 
+.univ_email {
+  padding: 8px 8px 8px 20px;
+  border-radius: 16px;
+  border: none;
+  background-color: #EFEFEF;
+  color: #B1B1B1;
+  width: 145px;
+  text-align: left;
+  font-size: 16px;
+}
 
 .false_pw {
   color: red;
   font-size: 10px;
   font-weight: bold;
   display: none;
+}
+
+.email_button {
+  display: inline;
+  padding: 3px 10px;
+  width: 30%;
+  background-color: #FFA000;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  
+  position: absolute;
+  right: 0px;
+  top: -5px;
 }

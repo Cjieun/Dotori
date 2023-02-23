@@ -1,5 +1,7 @@
-@media (max-width: 768px) {
+* {
+  font-family: 'Noto Sans KR', sans-serif;
 }
+
 
 .main_container {
   width: 375px;
@@ -13,7 +15,6 @@
 .before {
   width: 32px;
   height: 32px;
-  
   line-height: 32px;
   background-color: #FFA000;
   border-radius: 10px;
@@ -23,16 +24,6 @@
 
 .before a {
   color: white;
-}
-
-/* header */
-.header_container {
-  width: 90px;
-  height: 80px;
-  margin: 0 auto;
-  margin-bottom: 50px;
-  background-color: #FFA000;
-  border-radius: 20px;
 }
 
 .section_container {

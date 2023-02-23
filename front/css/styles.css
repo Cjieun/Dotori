@@ -21,3 +21,20 @@
 .before a {
   color: white;
 }
+
+/* 로고 */
+.header_container {
+  height: 80px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo_text {
+  font-size: 30px;
+  color: #B56700;
+  font-family: 'Logo';
+} 

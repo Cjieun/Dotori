@@ -41,3 +41,12 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+@font-face {
+  font-family: 'Logo';
+  src: url('../font/logo.ttf') format('truetype');
+}
+
+* {
+  font-family: 'Logo';
+}

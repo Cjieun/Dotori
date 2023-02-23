@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/join.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <title>가입하기 1단계</title>
 </head>
 
@@ -21,15 +24,16 @@
     <!-- 로고 -->
     <header>
       <div class="header_container">
-        <img src="이미지src" alt="">
+        <img src="../img/logo1.png" alt="">
+        <span class="logo_text">도토리</span>
       </div>
     </header>
 
     <!-- id, pw 입력창 -->
-    <form>
+    <form id="myForm">
       <div class="section_container">
         <div class="section_items">
-          <label for="name" class="name">이름</label>
+          <label for="name" class="J_label">이름</label>
           <input type="text" placeholder="이름을 입력해주세요" name="name" id="name" required>
 
           <label for="university" class="J_label">학교</label>
@@ -46,7 +50,8 @@
           <label for="email" class="J_label">이메일</label>
           <div class="email_univ">
             <input type="text" placeholder="이메일" name="email" id="email" required class="join_univ">
-            <div id="result"></div>
+            <span style="color:#474747ce;">@</span>
+            <div id="result" class="univ_email join_univ"></div>
           </div>
         </div>
 
@@ -58,42 +63,9 @@
     </form>
   </div>
 
-  <script script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="../axios_prac/join01.js"></script>
-
-  <script>
-    const univ = document.getElementById("univ");
-    const result_univ = document.getElementById("result");
-    const univ_email = document.getElementById("univ_email");
-  
-    univ.addEventListener("change", (event) => {
-      const selectedUniv = event.target.value;
-      let resultUniv = "";
-  
-      switch (selectedUniv) {
-        case "sangmyung": // 상명대
-          resultUniv = "sangmyung.kr"; 
-          break;
-        case "swu": // 서울여대
-          resultUniv = "@swu.ac.kr";
-          break;
-        case "kangnam": //강남대
-          resultUniv = "@kangnam.ac.kr";
-          break;
-        case "hufs": //한국외대
-          resultUniv = "@hufs.ac.kr";
-          break;
-        case "skuniv": // 서경대
-          resultUniv = "@skuniv.ac.kr";
-          break;
-        default: //성결대
-          resultUniv = "@sungkyul.ac.kr";
-          break;
-      }
-  
-      result_univ.textContent = resultUniv;
-      univ_email.placeholderContent = resultUniv;
-    });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script type='module' src="../js/register.js"></script>
 </body>
+
 </html>
