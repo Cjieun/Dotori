@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/join.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <title>비밀번호 찾기 2단계</title>
+</head>
+
+<body>
+  <div class="main_container">
+    <div class="before">
+      <a href="./join01.html"><i class="fas fa-angle-left"></i></a>
+    </div>
+    <!-- 로고 -->
+    <header>
+      <div class="header_container">
+        <img src="../img/logo1.png" alt="">
+        <span class="logo_text">도토리</span>
+      </div>
+    </header>
+
+    <!-- id, pw 입력창 -->
+    <form action="#">
+      <section>
+        <div class="section_container">
+          <div class="section_items">
+            <label for="J_name" class="J_label">입력하신 메일로 인증코드를 보냈습니다. </label>
+            <input type="text" placeholder="인증코드" name="J_name" id="J_name">
+          </div>
+
+          <div class="confirm_btn" style="margin-bottom: 30px;">
+            <a href="#">확인</a>
+          </div>
+
+          <div class="section_items">
+            <label for="J_name" class="J_label">비밀번호 재설정</label>
+            <input type="text" placeholder="비밀번호를 입력해주세요" name="search_pw" id="search_pw">
+
+            <label for="J_univ" class="J_label">비밀번호 확인 <span class="false_pw">비밀번호가 일치하지 않습니다.</span></label>
+            <input type="search" placeholder="비밀번호를 입력해주세요" name="confirm_pw" id="confirm_pw">
+          </div>
+
+          <div class="confirm_btn">
+            <a href="#">완료</a>
+          </div>
+        </div>
+      </section>
+    </form>
+  </div>
+
+  <script>
+    const search_pw = document.getElementById('search_pw');
+    const confirm_pw = document.getElementById('confirm_pw');
+    const false_pw = document.querySelector('.false_pw');
+
+    confirm_pw.addEventListener('input', (event) => {
+      if (search_pw.value !== confirm_pw.value) {
+        false_pw.style.display = 'inline';
+      } else {
+        false_pw.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+
+</html>

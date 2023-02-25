@@ -62,11 +62,10 @@ public class UserController {
 
         Cookie cookie = new Cookie("JSESSIONID", session.getId());
         cookie.setPath("/");
-        cookie.setHttpOnly(true);
+//        cookie.setHttpOnly(true);
         cookie.setMaxAge(30000 * 60);
         cookie.setSecure(true);
         response.addCookie(cookie);
-
         return new ResponseEntity(HttpStatus.OK);
     }
 

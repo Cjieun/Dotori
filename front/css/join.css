@@ -1,0 +1,196 @@
+@media (max-width: 768px) {
+}
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+/* header */
+header {
+  height: 80px;
+}
+
+.header_container {
+  height: 70px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+
+  position: absolute;
+  right: 50px;
+  top: 50px;
+}
+
+.header::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.header_container img {
+  display: inline-block;
+}
+
+.section_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  text-align: right;
+  gap: 22px;
+  margin-bottom: 40px;
+}
+
+.J_label {
+  font-size: 15px;
+  text-align: left;
+  color: #FFA000;
+  font-weight: bold;
+}
+
+.section_items {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.section_items input, select {
+  padding: 8px 8px 8px 20px;
+  border-radius: 16px;
+  border: none;
+  background-color: #EFEFEF;
+  color: #B1B1B1;
+}
+
+.sections_items_forgotPw a {
+  text-decoration: none;
+  color: #9795B5;
+  font-size: 12px;
+}
+
+.confirm_btn {
+  text-align: right;
+}
+
+.confirm_btn a {
+  display: inline-block;
+  width: 30%;
+  background-color: #FFA000 ;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* 가입완료축하이미지 */
+.success {
+  height: 150px;
+  margin-bottom: 50px;
+}
+
+.success_img img {
+  display: block;
+  width: 160px;
+  height: 160px;
+  background-color: #FFA000;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+/* 가입완료 텍스트 */
+.success_text {
+  color: #FFA000;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.success_btn {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+.success_btn a {
+  width: 250px;
+}
+.success_btn a:last-child {
+  background-color: #FFD286;
+}
+
+
+.confirm_btn button {
+  padding: 10px;
+  width: 30%;
+  background-color: #FFA000 ;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  margin-top: 8px;
+}
+
+.confirm_btn a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.email_univ {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: space-between
+}
+
+.join_univ {
+  width: 146px;
+}
+
+.univ_email {
+  padding: 8px 8px 8px 20px;
+  border-radius: 16px;
+  border: none;
+  background-color: #EFEFEF;
+  color: #B1B1B1;
+  width: 145px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.false_pw {
+  color: red;
+  font-size: 10px;
+  font-weight: bold;
+  display: none;
+}
+
+.email_button {
+  display: inline;
+  padding: 3px 10px;
+  width: 30%;
+  background-color: #FFA000;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  
+  position: absolute;
+  right: 0px;
+  top: -5px;
+}
+
+.btn {
+  margin-top: 20px;
+  width: 30%;
+  background-color: #FFA000;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  
+}
