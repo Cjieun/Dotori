@@ -1,0 +1,40 @@
+.main_container {
+  width: 375px;
+  background-color: #F7F7F7;
+  border-radius: 16px;
+  padding: 50px;
+  margin: 0 auto;
+  margin-top: 150px;
+  position: relative;
+}
+
+/* 뒤로가기 버튼 */
+.before {
+  width: 32px;
+  height: 32px;
+  
+  line-height: 32px;
+  background-color: #FFA000;
+  border-radius: 10px;
+  text-align: center;
+}
+.before a {
+  color: white;
+}
+
+/* 로고 */
+.header_container {
+  height: 80px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo_text {
+  font-size: 30px;
+  color: #B56700;
+  font-family: 'Logo';
+} 

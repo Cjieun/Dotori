@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/join.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <title>가입하기 1단계</title>
+</head>
+
+<body>
+  <div class="main_container">
+    <div class="before">
+      <a href="./login.html"><i class="fas fa-angle-left"></i></a>
+    </div>
+    <!-- 로고 -->
+    <header>
+      <div class="header_container">
+        <img src="../static/image/logo1.png" alt="">
+        <span class="logo_text">도토리</span>
+      </div>
+    </header>
+
+    <!-- id, pw 입력창 -->
+    <form id="myForm">
+      <div class="section_container">
+        <div class="section_items">
+          <label for="name" class="J_label">이름</label>
+          <input type="text" placeholder="이름을 입력해주세요" name="name" id="name" required>
+
+          <label for="university" class="J_label">학교</label>
+          <select id="university" name="university">
+            <option value="select">학교를 선택하세요</option>
+            <option value="sangmyung">상명대학교</option>
+            <option value="swu">서울여자대학교</option>
+            <option value="hufs">한국외국어대학교</option>
+            <option value="kangnam">강남대학교</option>
+            <option value="skuniv">서경대학교</option>
+            <option value="sungkyul">성결대학교</option>
+          </select>
+
+          <label for="email" class="J_label">이메일</label>
+          <div class="email_univ">
+            <input type="text" placeholder="이메일" name="email" id="email" required class="join_univ">
+            <span style="color:#474747ce;">@</span>
+            <div id="result" class="univ_email join_univ"></div>
+          </div>
+        </div>
+
+        <!-- 비밀번호 -->
+        <div class="section_items">
+          <label for="J_pw" class="J_label">비밀번호</label>
+          <input type="password" placeholder="비밀번호를 입력해주세요" name="search_pw" id="search_pw">
+
+          <label for="J_pw_confirm" class="J_label">비밀번호 확인 <span class="false_pw">비밀번호가 일치하지 않습니다.</span></label>
+          <input type="password" placeholder="비밀번호를 입력해주세요" name="confirm_pw" id="confirm_pw">
+        </div>
+        
+        <div class="confirm_btn" style="margin-top: 15px">
+          <button type="submit">다음</button>
+        </div>
+      </div>
+
+      <!-- <div class="confirm_btn">
+          누르면 이메일로 인증번호 발송되어야함 / 이름, 학교 저장
+          <a href="./join02.html">다음</a> 
+           -->
+  </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script type='module' src="../js/register.js"></script>
+</body>
+
+</html>

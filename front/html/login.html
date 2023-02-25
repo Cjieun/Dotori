@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/login.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <title>Login</title>
+</head>
+
+<body>
+  <div class="main_container">
+    <!-- 뒤로가기 - 홈.html로 경로 수정필요 -->
+    <div class="before">
+      <a href="#"><i class="fas fa-angle-left"></i></a>
+    </div>
+
+    <!-- 로고 -->
+    <header>
+      <div class="header_container">
+        <img src="../static/image/logo1.png" alt="">
+        <span class="logo_text">도토리</span>
+      </div>
+    </header>
+
+    <!-- id, pw 입력창 -->
+    <form id="login_form">
+      <div class="section_container">
+        <div class="section_items_input">
+          <input type="email" placeholder="이메일 주소" name="email" id="email" required>
+          <input type="password" placeholder="비밀번호" name="password" id="password" required>
+        </div>
+
+        <div class="sections_items_forgotPw">
+          <a href="./search_pw1.html">비밀번호를 잊으셨나요?</a>
+        </div>
+      </div>
+
+      <div class="confirm_btn" style="text-align: center;">
+        <button type="submit" id="submitBtn">로그인</button><br><br>
+        <!-- <input type="submit" value="로그인" id="submitBtn"><br><br> -->
+        <a href="./join01.html"> 가입하기</a>
+      </div>
+    </form>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script type="module" src="../js/login.js"></script>
+</body>
+</html>
